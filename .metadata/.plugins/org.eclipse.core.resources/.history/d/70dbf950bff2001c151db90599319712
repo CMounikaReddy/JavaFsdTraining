@@ -1,0 +1,36 @@
+package com.icici.entity;
+
+public class OrderClient {
+
+	public static void main(String[] args) {
+		
+		OrderManagementImpl orderManagementImpl = new OrderManagementImpl();
+		
+		/* Create Record
+		 * Order order = new Order(); order.setOrderName("New Purchase");
+		 * order.setAmount(2000); order.setStatus("Confirmed");
+		 * 
+		 * orderManagementImpl.createOrder(order);
+		 */
+		
+		/* Retrieve Record
+		 * int orderId = 3; order = orderManagementImpl.getOrder(3);
+		 * 
+		 * if(order==null) System.out.println("OrderId not Available");
+		 * 
+		 * else { System.out.println(order.getOrderId());
+		 * System.out.println(order.getOrderName());
+		 * System.out.println(order.getAmount()); }
+		 */
+		
+		Order order = new Order();
+		order.setOrderId(2);
+		order.setOrderName("Festival Purchase");
+		order.setAmount(20050); 
+		order.setStatus("Delivered");
+		
+		orderManagementImpl.updateOrder(order);
+		
+	}
+
+}

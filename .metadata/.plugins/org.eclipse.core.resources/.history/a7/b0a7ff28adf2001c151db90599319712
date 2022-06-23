@@ -1,0 +1,19 @@
+package com.market.asgn3;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+public class ProductRetrieve {
+	
+	EntityManagerFactory emf = Persistence.createEntityManagerFactory("jpa-tutorial");
+	 EntityManager entityManager = emf.createEntityManager();
+
+	 entityManager = getTransaction().begin();
+	 int key = int.valueOf(1);
+	 Product p = entityManager.find(Product.class, key);
+	 System.out.println(p.getProductNam,p.);
+
+	 entityManager.getTransaction().commit();
+
+}

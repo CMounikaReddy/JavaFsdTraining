@@ -1,0 +1,10 @@
+package com.ibankingnew.java8concept.funinterfaceexp;
+
+public class LoanProcessorClient {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

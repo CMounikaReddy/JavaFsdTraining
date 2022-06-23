@@ -1,0 +1,10 @@
+package com.market.asgn3;
+
+public class ProductClient {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,9 @@
+package com.icici.entity;
+
+
+@Entity
+public class Order {
+	
+	
+
+}

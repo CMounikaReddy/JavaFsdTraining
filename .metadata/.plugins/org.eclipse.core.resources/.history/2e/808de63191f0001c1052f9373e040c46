@@ -1,0 +1,14 @@
+package com.fruitset.assignment;
+
+public interface FruitPojo {
+	
+	String color;
+	int weight;
+	String fruitname;
+	float price;
+	
+	
+	
+
+
+}

@@ -1,0 +1,15 @@
+package com.ibankingnew.java8concept.funinterfaceexp;
+
+public class LoanCalculatorImpl {
+	
+	public String findHighestLoanAmountWithCustName(Loan a) {
+		return null;
+		
+	}
+	
+	public String findHighestLoanAmountWithCustNameAndGender(Loan b) {
+		return null;
+		
+	}
+
+}

@@ -1,0 +1,16 @@
+package com.icici.entity;
+
+public class OrderClient {
+
+	public static void main(String[] args) {
+		
+		OrderManagementImpl orderManagementImpl = new OrderManagementImpl();
+		
+		Order order = new Order();
+		order.setOrderName("New Purchase");
+		order.setAmount(2000);
+		
+		orderManagementImpl.createOrder(order);
+	}
+
+}
