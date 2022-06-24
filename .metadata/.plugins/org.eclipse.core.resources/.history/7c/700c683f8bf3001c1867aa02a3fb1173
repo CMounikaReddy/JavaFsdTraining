@@ -1,0 +1,17 @@
+package com.icici.dao;
+
+import com.icici.entity.OrderItem;
+
+public class OrderItemClient {
+
+	public static void main(String[] args) {
+		
+		OrderItem orderItem = new OrderItem();
+		orderItem.setProductId();
+		
+		
+		
+		
+	}
+
+}

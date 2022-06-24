@@ -41,7 +41,52 @@ public class OrderManagementImpl {
 
 	}
 	
-	
+	public void createOrderseqexp(Order order) {
+		EntityManagerFactory emf = null;
+		EntityManager entityManager = null;
+		EntityTransaction transaction = null;
+		try {
+			emf = Persistence.createEntityManagerFactory("corebanking");
+			entityManager = emf.createEntityManager();
+
+			transaction = entityManager.getTransaction();
+
+			// start transaction
+			transaction.begin();
+
+			OrderSequenceGen orderSequenceGen = entityManager.find(OrderSequenceGen.class, 0);
+			int orderCurrentValue = orderSequenceGen.getOrder_current_value();
+			orderCurrentValue = orderCurrentValue + 1;
+
+			orderSequenceGen.setOrder_current_value(orderCurrentValue);
+
+			// entity
+			order.setOrderId(orderCurrentValue);
+			order.setOrderName(order.getOrderName());
+			order.setAmount(order.getAmount());
+			// save call
+
+			entityManager.persist(order);
+
+			transaction.commit();
+			entityManager.close();
+
+			System.out.println("Order saved successfull....");
+
+		} catch (Exception e) {
+			System.out.println(e);
+			transaction.rollback();
+		} finally {
+
+			if (entityManager != null) {
+				entityManager.close();
+			}
+			if (emf != null) {
+				emf.close();
+			}
+		}
+	}
+
 
 	public void createOrder(Order order) {
 		
@@ -239,5 +284,89 @@ public class OrderManagementImpl {
 		return orderList;	
 			
 	}
+	
+	
+	List<Order> getOrderByNameLikeNamed(String orderName1) {
+
+		List<Order> orderList = null;
+		try {
+			getEntityManager();
+			transaction = entityManager.getTransaction();
+
+			// start transaction
+			transaction.begin();
+
+			Query q = entityManager.createNamedQuery("order_like", Order.class);
+			q.setParameter("orderName", orderName1);
+
+			orderList = q.getResultList();
+
+
+			transaction.commit();
+
+		} catch (Exception e) {
+			transaction.rollback();
+			System.out.println(e);
+		} finally {
+			closeEntityManager();
+			closeEntityManagerFactory();
+		}
+
+		return orderList;
+	}
+
+
+	
+	
+	Order createOrderWithItems(Order order) {
+		
+		EntityManagerFactory emf = null;
+		EntityManager entityManager = null;
+		EntityTransaction transaction = null;
+		try {
+			emf = Persistence.createEntityManagerFactory("corebanking");
+			entityManager = emf.createEntityManager();
+
+			transaction = entityManager.getTransaction();
+
+			// start transaction
+			transaction.begin();
+
+			OrderSequenceGen orderSequenceGen = entityManager.find(OrderSequenceGen.class, 0);
+			int orderCurrentValue = orderSequenceGen.getOrder_current_value();
+			orderCurrentValue = orderCurrentValue + 1;
+
+			orderSequenceGen.setOrder_current_value(orderCurrentValue);
+
+			// entity
+			order.setOrderId(orderCurrentValue);
+			order.setOrderName(order.getOrderName());
+			order.setAmount(order.getAmount());
+			order.setStatus(order.getStatus());
+			// save call
+
+			entityManager.persist(order);
+
+			transaction.commit();
+			entityManager.close();
+
+			System.out.println("Order saved successfully....");
+
+		} catch (Exception e) {
+			System.out.println(e);
+			transaction.rollback();
+		} finally {
+
+			if (entityManager != null) {
+				entityManager.close();
+			}
+			if (emf != null) {
+				emf.close();
+			}
+		}
+		
+		return order;
+	}
+	
 	
 }
