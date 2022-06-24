@@ -61,24 +61,24 @@ public class OrderClient {
 		 * System.out.println(order.getStatus()); System.out.println(order.getAmount());
 		 * }
 		 * 
-		 * System.out.println("Order details retrieval successfull...."); }
+		 * System.out.println("Order details retrieval successful...."); }
 		 */
 		
 		Order order = new Order(); 
-		order.setOrderName("Personal Purchase");
-		order.setAmount(3500); 
-		order.setStatus("Processing");
+		order.setOrderName("New Year Purchase");
+		order.setAmount(5300); 
+		order.setStatus("Delivered");
 		
 		OrderItem OrderItem1 = new OrderItem();
-		OrderItem1.setProductId(666);
+		OrderItem1.setProductId(66);
 		OrderItem1.setOrder(order);
 		
 		OrderItem OrderItem2 = new OrderItem();
-		OrderItem2.setProductId(546);
+		OrderItem2.setProductId(246);
 		OrderItem2.setOrder(order);
 		
 		OrderItem OrderItem3 = new OrderItem();
-		OrderItem3.setProductId(136);
+		OrderItem3.setProductId(336);
 		OrderItem3.setOrder(order);
 		
 		OrderItem OrderItem4 = new OrderItem();
