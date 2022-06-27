@@ -1,13 +1,12 @@
 package com.icici.entity;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.icici.dao.PaymentDaoImpl;
 
 public class OrderClient {
 
 	public static void main(String[] args) {
 
-		OrderManagementImpl orderManagementImpl = new OrderManagementImpl();
+		// OrderManagementImpl orderManagementImpl = new OrderManagementImpl();
 
 		/*
 		 //Create Record 
@@ -64,37 +63,36 @@ public class OrderClient {
 		 * System.out.println("Order details retrieval successful...."); }
 		 */
 		
-		Order order = new Order(); 
-		order.setOrderName("New Year Purchase");
-		order.setAmount(5300); 
-		order.setStatus("Delivered");
+		/*
+		 * Order order = new Order(); order.setOrderName("New Year Purchase");
+		 * order.setAmount(5300); order.setStatus("Delivered");
+		 * 
+		 * OrderItem OrderItem1 = new OrderItem(); OrderItem1.setProductId(66);
+		 * OrderItem1.setOrder(order);
+		 * 
+		 * OrderItem OrderItem2 = new OrderItem(); OrderItem2.setProductId(246);
+		 * OrderItem2.setOrder(order);
+		 * 
+		 * OrderItem OrderItem3 = new OrderItem(); OrderItem3.setProductId(336);
+		 * OrderItem3.setOrder(order);
+		 * 
+		 * OrderItem OrderItem4 = new OrderItem(); OrderItem4.setProductId(892);
+		 * OrderItem4.setOrder(order);
+		 * 
+		 * List<OrderItem> itemsList = new ArrayList(); itemsList.add(OrderItem1);
+		 * itemsList.add(OrderItem2); itemsList.add(OrderItem3);
+		 * itemsList.add(OrderItem4);
+		 * 
+		 * order.setItems(itemsList);
+		 * 
+		 * orderManagementImpl.createOrderWithItems(order);
+		 */
 		
-		OrderItem OrderItem1 = new OrderItem();
-		OrderItem1.setProductId(66);
-		OrderItem1.setOrder(order);
+		Payment payment = new Payment();
+		payment.setPaymentStatus("Payment Pending");
 		
-		OrderItem OrderItem2 = new OrderItem();
-		OrderItem2.setProductId(246);
-		OrderItem2.setOrder(order);
-		
-		OrderItem OrderItem3 = new OrderItem();
-		OrderItem3.setProductId(336);
-		OrderItem3.setOrder(order);
-		
-		OrderItem OrderItem4 = new OrderItem();
-		OrderItem4.setProductId(892);
-		OrderItem4.setOrder(order);
-		
-		List<OrderItem> itemsList = new ArrayList();
-		itemsList.add(OrderItem1);
-		itemsList.add(OrderItem2);
-		itemsList.add(OrderItem3);
-		itemsList.add(OrderItem4);
-		
-		order.setItems(itemsList);
-		
-		orderManagementImpl.createOrderWithItems(order);
-		
+		PaymentDaoImpl paymentDaoImpl = new PaymentDaoImpl();
+		paymentDaoImpl.savePaymentForOrder(payment, 873);
 
 	}
 

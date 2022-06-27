@@ -1,0 +1,20 @@
+package com.icici.dao;
+
+import com.icici.entity.Product;
+
+public class ProductClient {
+
+	public static void main(String[] args) {
+		
+		Product product = new Product();
+		product.setPrdId(163);
+		product.setProdName("HP Laptop I3");
+		product.setPrice(56357);
+			
+		ProductDaoImpl productDaoImpl= new ProductDaoImpl();
+		
+		productDaoImpl.saveProduct(product);
+
+	}
+
+}

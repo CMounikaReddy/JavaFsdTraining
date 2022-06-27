@@ -1,0 +1,22 @@
+package com.icici.dao;
+
+import com.icici.entity.Customer;
+
+public class CustomerClient {
+
+	public static void main(String[] args) {
+		
+		Customer customer = new Customer();
+		customer.setCustomername("Moni");
+		
+		
+		
+		OrderItemDAOImpl orderItemDaoImpl= new OrderItemDAOImpl();
+		//orderItemDaoImpl.saveOrderItem(orderItem, 11);
+		
+		orderItemDaoImpl.getOrderWithOrderItemDetail(6);
+	}
+
+	}
+
+}

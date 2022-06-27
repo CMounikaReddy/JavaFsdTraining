@@ -1,0 +1,5 @@
+package com.transactions.entity;
+
+public class Bank {
+
+}

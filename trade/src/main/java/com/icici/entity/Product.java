@@ -1,12 +1,15 @@
 package com.icici.entity;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.ManyToMany;
+
 
 @Entity
-@Table(name = "product")
 public class Product {
 	
 	@GeneratedValue
@@ -17,6 +20,16 @@ public class Product {
 	
 	private double price;
 	
+	@ManyToMany(mappedBy = "products")
+	private Set<Customer> customers = new HashSet<Customer>();
+	
+	
+	public Set<Customer> getCustomers() {
+		return customers;
+	}
+	public void setCustomers(Set<Customer> customers) {
+		this.customers = customers;
+	}
 	
 	public int getPrdId() {
 		return prdId;

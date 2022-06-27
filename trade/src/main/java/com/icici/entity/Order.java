@@ -5,10 +5,11 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -32,7 +33,19 @@ public class Order {
 	@OneToMany(mappedBy = "order",cascade = {CascadeType.ALL})
 	List<OrderItem> items;
 	
+	@OneToOne
+    @JoinColumn(name="payment_id")
+    private Payment payment;
 	
+	
+	public Payment getPayment() {
+		return payment;
+	}
+
+	public void setPayment(Payment payment) {
+		this.payment = payment;
+	}
+
 	public List<OrderItem> getItems() {
 		return items;
 	}

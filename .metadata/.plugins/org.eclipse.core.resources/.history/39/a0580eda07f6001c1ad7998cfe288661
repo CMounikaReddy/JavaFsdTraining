@@ -1,0 +1,21 @@
+package com.icici.dao;
+
+import com.icici.entity.Customer;
+
+public class CustomerClient {
+
+	public static void main(String[] args) {
+		
+		Customer customer = new Customer();
+		customer.setCustomername("Jimin");
+		customer.setAge(26);
+			
+		CustomerDaoImpl customerDaoImpl= new CustomerDaoImpl();
+		
+		//customerDaoImpl.saveCustomer(customer);
+		
+		customerDaoImpl.custToProd(2,21);
+	}
+
+}
+

@@ -1,0 +1,19 @@
+package com.icici.dao;
+
+import com.icici.entity.Product;
+
+public class ProductClient {
+
+	public static void main(String[] args) {
+		
+		Product product = new Product();
+		product.setProdName("Samsung");
+		product.setPrice(16656);
+			
+		ProductDaoImpl productDaoImpl= new ProductDaoImpl();
+		
+		productDaoImpl.saveProduct(product);
+
+	}
+
+}
