@@ -6,13 +6,16 @@ public class ProductClient {
 
 	public static void main(String[] args) {
 		
-		Product product = new Product();
-		product.setProdName("One Plus 10R");
-		product.setPrice(38999);
-			
-		ProductDaoImpl productDaoImpl= new ProductDaoImpl();
+		//Product product = new Product();
 		
-		productDaoImpl.saveProduct(product);
+		 // product.setProdName("One Plus 10R"); product.setPrice(38999);
+		  
+		  ProductDaoImpl productDaoImpl= new ProductDaoImpl();
+		  
+		 // productDaoImpl.saveProduct(product);
+		 
+		  productDaoImpl.getProductList();
+		
 
 	}
 
