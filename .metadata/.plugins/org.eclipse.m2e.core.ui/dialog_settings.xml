@@ -6,6 +6,7 @@
 	</section>
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="C:\GitDownloadedcode\JavaFsdTraining\Transactions"/>
 			<item value="C:\java fsd workspace\trade"/>
 			<item value="C:\Users\Administrator\Documents\hibernatejpa\loanbankinghibernatejpa"/>
 		</list>
@@ -50,14 +51,20 @@
 	</section>
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
+			<item value="Office"/>
+			<item value="Accounts"/>
 			<item value="Banksell"/>
 			<item value="iciciloan"/>
 		</list>
 		<list key="name">
+			<item value="Association"/>
+			<item value="Banking"/>
 			<item value="product"/>
 			<item value="Trade App"/>
 		</list>
 		<list key="artifactId">
+			<item value="Accounts"/>
+			<item value="Transactions"/>
 			<item value="Marketing"/>
 			<item value="trade"/>
 		</list>

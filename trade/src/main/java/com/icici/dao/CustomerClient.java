@@ -14,7 +14,9 @@ public class CustomerClient {
 		
 		//customerDaoImpl.saveCustomer(customer);
 		
-		customerDaoImpl.custToProd(6,28);
+		//customerDaoImpl.custToProd(6,28);
+		
+		customerDaoImpl.getCustomerList();
 	}
 
 }
