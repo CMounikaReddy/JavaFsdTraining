@@ -72,8 +72,8 @@ void getProductList() {
 			Root<Product> product = cq.from(Product.class);
 			cq.select(product);
 			
-			TypedQuery<Product> q = entityManager.createQuery(cq);
-			List<Product> prodlist = q.getResultList();
+			TypedQuery<Product> prd = entityManager.createQuery(cq);
+			List<Product> prodlist = prd.getResultList();
 			
 			for(Product c:prodlist) {
 				System.out.print(c.getProdName() + " - ");

@@ -70,6 +70,7 @@
 	</section>
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="C:\Users\Administrator\Downloads\sharemarket\sharemarket"/>
 			<item value="C:\Users\Administrator\Documents\javafsdtrainingcorporate-master\springframeworkcode\springiocaop"/>
 		</list>
 		<list key="projectNameTemplate">
