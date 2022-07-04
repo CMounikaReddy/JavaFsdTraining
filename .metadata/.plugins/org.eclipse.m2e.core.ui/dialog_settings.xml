@@ -70,8 +70,16 @@
 	</section>
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
-			<item value="C:\Users\Administrator\Downloads\organization"/>
+			<item value="C:\GitDownloadedcode\JavaFsdTraining\shopcustomer"/>
+			<item value="C:\GitDownloadedcode\JavaFsdTraining\shoporder"/>
+			<item value="C:\GitDownloadedcode\JavaFsdTraining\shopproduct"/>
+			<item value="C:\GitDownloadedcode\JavaFsdTraining\shopregistry"/>
+			<item value="C:\Users\Administrator\Downloads\shopproduct"/>
+			<item value="C:\Users\Administrator\Downloads\shoporder"/>
+			<item value="C:\Users\Administrator\Downloads\shopcustomer"/>
+			<item value="C:\Users\Administrator\Downloads\shopregistry"/>
 			<item value="C:\Users\Administrator\Downloads\sharemarket\sharemarket"/>
+			<item value="C:\Users\Administrator\Downloads\organization"/>
 			<item value="C:\Users\Administrator\Documents\javafsdtrainingcorporate-master\springframeworkcode\springiocaop"/>
 		</list>
 		<list key="projectNameTemplate">
