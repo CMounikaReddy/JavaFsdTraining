@@ -70,6 +70,13 @@
 	</section>
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="C:\GitDownloadedcode\JavaFsdTraining\sharemarket"/>
+			<item value="C:\GitDownloadedcode\JavaFsdTraining\microservice4"/>
+			<item value="C:\GitDownloadedcode\JavaFsdTraining\microservice3"/>
+			<item value="C:\GitDownloadedcode\JavaFsdTraining\microservice2"/>
+			<item value="C:\GitDownloadedcode\JavaFsdTraining\microservice1"/>
+			<item value="C:\Users\Administrator\Documents\javafsdtrainingcorporate-master\feinhystrixcircuitbreaker\amazonpayment"/>
+			<item value="C:\Users\Administrator\Documents\javafsdtrainingcorporate-master\feinhystrixcircuitbreaker\amazonorder"/>
 			<item value="C:\GitDownloadedcode\JavaFsdTraining\shopcustomer"/>
 			<item value="C:\GitDownloadedcode\JavaFsdTraining\shoporder"/>
 			<item value="C:\GitDownloadedcode\JavaFsdTraining\shopproduct"/>
@@ -78,9 +85,6 @@
 			<item value="C:\Users\Administrator\Downloads\shoporder"/>
 			<item value="C:\Users\Administrator\Downloads\shopcustomer"/>
 			<item value="C:\Users\Administrator\Downloads\shopregistry"/>
-			<item value="C:\Users\Administrator\Downloads\sharemarket\sharemarket"/>
-			<item value="C:\Users\Administrator\Downloads\organization"/>
-			<item value="C:\Users\Administrator\Documents\javafsdtrainingcorporate-master\springframeworkcode\springiocaop"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>

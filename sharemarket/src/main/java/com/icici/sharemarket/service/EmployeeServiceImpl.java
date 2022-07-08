@@ -30,6 +30,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 		emppojo.setEmpId(employee.getEmpId());
 		emppojo.setEmpname(employee.getEmpname());
 		emppojo.setAge(employee.getAge());
+		emppojo.setStatus(employee.getStatus());
 		
 		}catch(EntityNotFoundException e) {
 			emppojo.setStatus("Emp Id not found");
@@ -50,6 +51,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 		Employee employee = new Employee();
 		employee.setEmpname(employeePojo.getEmpname());
 		employee.setAge(employeePojo.getAge());
+		employee.setStatus(employeePojo.getStatus());
 		
 		employeeRepository.save(employee);
 		
@@ -75,6 +77,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 		Employee employee = employeeRepository.getReferenceById(employeePojo.getEmpId());
 		employee.setAge(employeePojo.getAge());
 		employee.setEmpname(employeePojo.getEmpname());
+		employee.setStatus(employeePojo.getStatus());
 	
 		return employeePojo;
 	}
@@ -113,7 +116,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 		List<EmployeePojo> listEmppojo = new ArrayList();
 		List<Employee> listEmployee = new ArrayList();
 		
-		listEmppojo = employeeRepository.findall();
+		
 		
 		return null;
 	}

@@ -1,8 +1,6 @@
 package com.orderset.assignment2;
 
 import java.util.Optional;
-
-
 import java.util.Random;
 
 public class OrderImpl {
@@ -25,13 +23,11 @@ public class OrderImpl {
 	    Optional<OrderPojo> orderpojoobj = Optional.of(orderpojo);
 
 
-		int orderid = createorderid();
+		int orderid = orderpojo.getOrderId();
 		
-		OrderPojo.setOrderId(orderid);
+		orderpojo.setOrderId(orderid);
 		
 		return orderpojoobj;
 	}
-
-}
 
 }

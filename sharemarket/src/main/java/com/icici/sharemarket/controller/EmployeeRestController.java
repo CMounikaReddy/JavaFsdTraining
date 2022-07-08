@@ -1,6 +1,7 @@
 package com.icici.sharemarket.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -14,6 +15,7 @@ import com.icici.sharemarket.pojo.EmployeePojo;
 import com.icici.sharemarket.service.EmployeeService;
 
 @RestController
+@CrossOrigin(origins="http://localhost:3002")
 @RequestMapping(path = "/employee")
 public class EmployeeRestController {
 	
@@ -24,8 +26,8 @@ public class EmployeeRestController {
 	    public EmployeePojo getEmployees() 
 	    {
 	    	EmployeePojo empPojo = new EmployeePojo();
-	    	empPojo.setEmpname("Jin");
-	    	empPojo.setAge(30);
+	    	empPojo.setEmpname("V");
+	    	empPojo.setAge(26);
 	    	empPojo.setStatus("Accepted");
 	    	
 			 return empPojo;
@@ -37,11 +39,12 @@ public class EmployeeRestController {
 	    	
 	    	System.out.println(emppojo.getEmpname());
 	    	System.out.println(emppojo.getAge());
+	    	System.out.println(emppojo.getStatus());
 	    	employeeService.saveEmployee(emppojo);
 			 return emppojo;
 	    }
 	    
-	    @GetMapping(path="/getEmp/{id}", produces= "application/json")
+	    @GetMapping(path="/getEmp/{empId}", produces= "application/json")
 	    public EmployeePojo getemp(@PathVariable Integer id) {
 	       
 	    	EmployeePojo emppojo = employeeService.getEmployee(id);
@@ -66,7 +69,7 @@ public class EmployeeRestController {
 			 return empPojo;
 	    }
 	    
-	    @DeleteMapping(path="/deleteEmp/{id}", produces = "application/json")
+	    @DeleteMapping(path="/deleteEmp/{empId}", produces = "application/json")
 	    public EmployeePojo deleteEmp(@PathVariable Integer id) 
 	    {
 	    	EmployeePojo emppojo = employeeService.deleteEmployee(id);

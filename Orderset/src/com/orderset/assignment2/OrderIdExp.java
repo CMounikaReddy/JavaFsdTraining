@@ -9,9 +9,9 @@ public class OrderIdExp {
 		
 		OrderImpl orderimpl = new OrderImpl();
 		
-		OrderPojo orderpojo = new OrderPojo();
+		//OrderPojo orderpojo = new OrderPojo();
 		
-		orderpojoobj = Optional.ofNullable(orderPojoObj).orElse(Optional.of(new OrderPojo()));
+	//	orderpojo = Optional.ofNullable(orderPojoObj).orElse(Optional.of(new OrderPojo()));
 	}
 
 }
